@@ -75,4 +75,4 @@ We provided a convenient batch script to launch the AI engine and the n8n dashbo
 - **VRAM Optimized:** Embeddings run on the CPU to ensure the GPU is entirely dedicated to fast token generation by Llama 3.2.
 
 ## 🙏 Acknowledgments
-- **Test Dataset:** Special thanks to the creator of the 1000+ PDF invoice dataset used for training, testing, and hardening the fallback logic of this pipeline. Their contribution to the open-source community made this project possible.
+- **Test Dataset:** Special thanks to [femstac/Sample-Pdf-invoices](https://github.com/femstac/Sample-Pdf-invoices) for providing the 1000+ PDF invoice dataset used for training, testing, and hardening the fallback logic of this pipeline. Their contribution to the open-source community made this project possible.
