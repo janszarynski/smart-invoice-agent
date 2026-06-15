@@ -2,16 +2,16 @@
 
 An autonomous, 100% local, and private AI-powered document processing pipeline. The system monitors a local directory for incoming financial and e-commerce documents (PDFs), processes them using a Retrieval-Augmented Generation (RAG) workflow, extracts critical structured business metrics using a local open-source LLM (Llama 3.2 via Ollama), and appends the structured results into a centralized Excel/CSV ledger.
 
-## 🚀 Performance
+## Performance
 With optimized embedding generation and memory management, this pipeline extracts structured JSON data from a standard PDF invoice in **~27 seconds** on standard consumer hardware, entirely offline.
 
-## 🏗 Core Architecture
+## Core Architecture
 1. **Ingestion Layer (n8n):** Monitors local directories, captures new files, executes the Python extraction script, and handles file archival.
 2. **Orchestration Layer (Python & LangChain):** Handles document loading, text chunking, and LLM prompting.
 3. **Reasoning Layer (Local LLM via Ollama):** Runs **Llama 3.2** locally to ensure absolute data privacy and zero API usage costs.
 4. **Embedding & Storage Layer:** Uses CPU-bound `HuggingFaceEmbeddings` (`all-MiniLM-L6-v2`) to free up GPU VRAM. Implements transient, in-memory FAISS vector indexing for lightning-fast retrieval without file-lock collisions.
 
-## 💻 Tech Stack
+## Tech Stack
 - **Python 3.11+**
 - **LangChain & LangChain-Community**
 - **Ollama** (Llama 3.2)
@@ -19,7 +19,7 @@ With optimized embedding generation and memory management, this pipeline extract
 - **Sentence-Transformers** (all-MiniLM-L6-v2)
 - **n8n** (Workflow Orchestration)
 
-## 🛠 Setup & Installation
+## Setup & Installation
 
 ### 1. Prerequisites
 - Install [Python 3.11+](https://www.python.org/downloads/)
