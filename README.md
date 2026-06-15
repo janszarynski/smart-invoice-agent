@@ -64,7 +64,7 @@ We provided a convenient batch script to launch the AI engine and the n8n dashbo
 3. Activate the workflow.
 4. Drop a PDF invoice into the `inbox` folder. The system will automatically process it, extract the structured data to `data/master_ledger.csv`, and move the PDF to the `archive` folder.
 
-## 📋 Features
+## Features
 - **Zero API Costs:** Runs 100% locally.
 - **Privacy First:** No documents are ever sent to external servers.
 - **Neuro-Symbolic Architecture:** Combines the contextual reasoning of Llama 3.2 with deterministic Python (Regex) fail-safes (Smart Fallbacks) for rigid fields (math calculations, zip codes, fractured addresses) to guarantee 100% extraction accuracy even when the LLM hallucinates or PDF parsing breaks table structures.
@@ -72,5 +72,5 @@ We provided a convenient batch script to launch the AI engine and the n8n dashbo
 - **Strict JSON Enforcement:** Forces the reasoning model to return strictly structured data objects mapping to predefined schemas.
 - **VRAM Optimized:** Embeddings run on the CPU to ensure the GPU is entirely dedicated to fast token generation by Llama 3.2.
 
-## 🙏 Acknowledgments
+## Acknowledgments
 - **Test Dataset:** Special thanks to [femstac/Sample-Pdf-invoices](https://github.com/femstac/Sample-Pdf-invoices) for providing the 1000+ PDF invoice dataset used for training, testing, and hardening the fallback logic of this pipeline. Their contribution to the open-source community made this project possible.
