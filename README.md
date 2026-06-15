@@ -1,7 +1,5 @@
 # Smart Invoice & E-commerce Agent (Local RAG Pipeline)
 
-![Data Mapping](Data_Mapping.png)
-
 An autonomous, 100% local, and private AI-powered document processing pipeline. The system monitors a local directory for incoming financial and e-commerce documents (PDFs), processes them using a Retrieval-Augmented Generation (RAG) workflow, extracts critical structured business metrics using a local open-source LLM (Llama 3.2 via Ollama), and appends the structured results into a centralized Excel/CSV ledger.
 
 ## 🚀 Performance
