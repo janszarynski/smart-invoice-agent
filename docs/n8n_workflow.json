@@ -1,0 +1,72 @@
+{
+  "name": "Local RAG Invoice Processor",
+  "nodes": [
+    {
+      "parameters": {
+        "path": "C:\\Users\\dusty\\Desktop\\projekt\\ledger\\invoices_inbox",
+        "events": [
+          "add"
+        ],
+        "options": {}
+      },
+      "id": "1e786b6a-9f5b-432d-986c-94cf5e28a5ff",
+      "name": "Local File Trigger",
+      "type": "n8n-nodes-base.localFileTrigger",
+      "typeVersion": 1,
+      "position": [
+        380,
+        240
+      ]
+    },
+    {
+      "parameters": {
+        "command": "C:\\Users\\dusty\\Desktop\\projekt\\venv\\Scripts\\python.exe C:\\Users\\dusty\\Desktop\\projekt\\main.py --path \"{{ $json.path }}\""
+      },
+      "id": "e0a0d421-2e92-491f-b51f-a9cb991cb14b",
+      "name": "Execute RAG Pipeline",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [
+        600,
+        240
+      ]
+    },
+    {
+      "parameters": {
+        "command": "move \"{{ $('Local File Trigger').item.json.path }}\" \"C:\\Users\\dusty\\Desktop\\projekt\\ledger\\processed_invoices\\\""
+      },
+      "id": "cd5565f1-3329-4a5f-b52e-50346a362ffb",
+      "name": "Archive Processed Invoice",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [
+        820,
+        240
+      ]
+    }
+  ],
+  "connections": {
+    "Local File Trigger": {
+      "main": [
+        [
+          {
+            "node": "Execute RAG Pipeline",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Execute RAG Pipeline": {
+      "main": [
+        [
+          {
+            "node": "Archive Processed Invoice",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  }
+}

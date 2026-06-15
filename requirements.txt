@@ -1,0 +1,8 @@
+langchain
+langchain-community
+langchain-ollama
+ollama
+python-dotenv
+pypdf
+faiss-cpu
+mcp

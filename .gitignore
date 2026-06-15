@@ -1,0 +1,27 @@
+# Environments
+venv/
+env/
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Vector Store
+.faiss_store/
+.faiss_test/
+
+# Data
+data/
+archive/
+inbox/
+1000+ PDF_Invoice_Folder/
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Temporary Scripts
+scratch/
