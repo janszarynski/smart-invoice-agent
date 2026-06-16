@@ -60,7 +60,7 @@ We provided a convenient batch script to launch the AI engine and the n8n dashbo
 ```
 
 1. Open `http://localhost:5678` in your browser.
-2. Import the `n8n_workflow.json` (if provided) to set up your nodes.
+2. Import the `docs/n8n_workflow.json` file to automatically set up your workflow nodes.
 3. Activate the workflow.
 4. Drop a PDF invoice into the `inbox` folder. The system will automatically process it, extract the structured data to `data/master_ledger.csv`, and move the PDF to the `archive` folder.
 
